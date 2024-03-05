@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&display=swap');
+
+:root {
+    --light: #FBF9F1;
+    --primary: #92C7CF;
+    --light-primary: #AAD7D9;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --grey-light: #E5E1DA;
+    --dark: #363949;
+    --danger: #D32F2F;
+    --light-danger: #FECDD3;
+    --warning: #FBC02D;
+    --light-warning: #FFF2C6;
+    --success: #388E3C;
+    --light-success: #BBF7D0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", sans-serif;
+}
+
+.parent {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    transition: grid-template-columns 0.5s ease-in;
+}
+
+.expanded {
+    grid-template-columns: clamp(200px, 25%, 300px) 1fr;
+}
+
+.collapsed {
+    grid-template-columns: 0 1fr;
+}
+
+header {
+    grid-column: 1 / 3;
+    background-color: var(--light-primary);
+}
+
+main {
+    grid-column: 2 / 3;
+}
+
+.sidebar {
+    z-index: -1;
+    text-wrap: nowrap;
+    background-color: var(--primary);
+}
+
+.section{
+    padding: 1rem;
+    background-color: var(--light);
+}
